@@ -1,0 +1,12 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+
+{% block title %}
+    Registration
+{% endblock %}
+
+{% block content %}
+    <br><br>
+    {% include "home/sections/register-section.html" with posts=postdata %}
+{% endblock %}h

@@ -1,0 +1,13 @@
+{% extends 'home/base.html' %}
+
+
+{% block title %}
+    Contact
+{% endblock %}
+
+
+{% block content %}
+    <br><br>
+    {% include 'home/sections/contact-section.html' with posts=postdata %}
+
+{% endblock %}

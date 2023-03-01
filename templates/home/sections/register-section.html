@@ -1,0 +1,85 @@
+{% load static %}
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>ShelterSearch</h2>
+          <p>Register</p>
+        </header>
+        <div class="row gy-4">
+
+          <div class="col-lg-12">
+            <form action="{% url 'register' %}" method="post" role="form" class="php-email-form">
+                <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+              <div class="row gy-4">
+                <div class="col-md-6">
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+
+                <div class="col-md-6 ">
+                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                </div>
+
+                <div class="col-md-6">
+                    <input type="tel" name="phone" class="form-control" placeholder="Phone" maxlength="10" required>
+                </div>
+
+                <div class="col-md-6">
+                    <select name="gender" class="form-control" required>
+                        <option value disabled selected hidden>Gender</option>
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
+                        <option value="O">Custom</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <select name="room" class="form-control" required >
+                        <option value disabled selected hidden>Room Occupancy</option>
+                        <option value="S">Single</option>
+                        <option value="D">Double</option>
+                        <option value="T">Triple</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                  <input type="text" name="college" class="form-control" placeholder="Your College Name" required>
+                </div>
+{#                <div class="col-md-6">#}
+{#                    <input type="checkbox" value="Yes" name="taxi_service" id="id_taxi_service">#}
+{#                    <label class="vCheckboxLabel" id="id_taxi_service">Taxi Service</label>#}
+{#                </div>#}
+                  <div class="col-md-12">
+                      <label class="form-label">When you arrive at Bangalore, would to like to use our: </label>
+                  </div>
+
+                <div class="col-md-6">
+                  <input class="form-check-input" type="checkbox" value="Yes" name="taxi_service" id="id_taxi_service">
+                  <label class="form-label" for="flexCheckDefault">
+                    Taxi Service
+                  </label>
+                </div>
+                <div class="col-md-6">
+                    <input type="checkbox" class="form-check-input" value="Yes" name="hotel_service" id="id_hotel_service">
+                    <label class="vCheckboxLabel" id="id_hotel_service">Hotel Service</label>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit" value="Submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+    <!-- End Contact Section -->
